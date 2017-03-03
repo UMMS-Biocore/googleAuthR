@@ -559,7 +559,7 @@ loginOutput <- function(output_name){
 #' }
 renderLogin <- function(session,
                         access_token,
-                        login_text="Login via Google Berk",
+                        login_text="Login via Google",
                         logout_text="Logout",
                         login_class="btn btn-primary",
                         logout_class="btn btn-default",
@@ -736,8 +736,8 @@ googleAuth <- function(input, output, session,
                                  href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                              access_type = access_type,
                                                              approval_prompt = approval_prompt),
-                                 class=login_class,
-                                 role="button")
+                                 class=login_class
+                                 )
                                  )
     } else {
       if(revoke){
