@@ -736,7 +736,7 @@ googleAuth <- function(input, output, session,
                                                              access_type = access_type,
                                                              approval_prompt = approval_prompt)
                                  )
-                                 ,
+                                 , shiny::br(), shiny::br(),
                                  shiny::a(login_text,
                                           href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                                       access_type = access_type,
