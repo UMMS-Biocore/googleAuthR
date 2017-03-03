@@ -559,7 +559,7 @@ loginOutput <- function(output_name){
 #' }
 renderLogin <- function(session,
                         access_token,
-                        login_text="Login via Google",
+                        login_text="Login via Google Berk",
                         logout_text="Logout",
                         login_class="btn btn-primary",
                         logout_class="btn btn-default",
@@ -695,7 +695,7 @@ googleAuthUI <- function(id){
 #' @family shiny module functions
 #' @export
 googleAuth <- function(input, output, session,
-                       login_text="Login via Google",
+                       login_text="Login via Google Berk",
                        logout_text="Logout",
                        login_class="btn btn-primary",
                        logout_class="btn btn-default",
