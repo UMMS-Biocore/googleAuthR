@@ -726,6 +726,7 @@ googleAuth <- function(input, output, session,
     })
 
   output$googleAuthUi <- shiny::renderUI({
+    p("Im here."),
 
 
 
