@@ -732,17 +732,19 @@ googleAuth <- function(input, output, session,
     
       if(is.null(shiny::isolate(accessToken()))) {
           list(
-              shiny::a(login_text,
+              shiny::a(paste0(login_text, " in the same tab"),
                        href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                    access_type = access_type,
                                                    approval_prompt = approval_prompt)
+                       , style = "margin: 20px;"
               )
               , shiny::br(), shiny::br(),
-              shiny::a(login_text,
+              shiny::a(paste0(login_text, " in a new tab"),
                        href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                    access_type = access_type,
                                                    approval_prompt = approval_prompt),
                        target="_blank"
+                       , style = "margin: 20px;"
               )
           )
           
