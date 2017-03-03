@@ -726,17 +726,19 @@ googleAuth <- function(input, output, session,
     })
 
   output$googleAuthUi <- shiny::renderUI({
-    p("Im here."),
 
 
 
     if(is.null(shiny::isolate(accessToken()))) {
+                        list(shiny::p("Im here."),
+
                         shiny::a(login_text,
                                  href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                              access_type = access_type,
                                                              approval_prompt = approval_prompt),
                                  class=login_class,
                                  role="button")
+                                 )
     } else {
       if(revoke){
 
