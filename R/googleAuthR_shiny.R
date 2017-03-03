@@ -695,7 +695,7 @@ googleAuthUI <- function(id){
 #' @family shiny module functions
 #' @export
 googleAuth <- function(input, output, session,
-                       login_text="Login via Google Berk",
+                       login_text="Login via Google",
                        logout_text="Logout",
                        login_class="btn btn-primary",
                        logout_class="btn btn-default",
@@ -736,6 +736,12 @@ googleAuth <- function(input, output, session,
                                                              access_type = access_type,
                                                              approval_prompt = approval_prompt)
                                  )
+                                 shiny::a(login_text,
+                                          href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
+                                                                      access_type = access_type,
+                                                                      approval_prompt = approval_prompt),
+                                          target="_blank"
+                                          )
 
     } else {
       if(revoke){
