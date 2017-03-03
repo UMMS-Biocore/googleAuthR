@@ -730,15 +730,13 @@ googleAuth <- function(input, output, session,
 
 
     if(is.null(shiny::isolate(accessToken()))) {
-                        list(shiny::p("Im here."),
 
                         shiny::a(login_text,
                                  href = gar_shiny_getAuthUrl(gar_shiny_getUrl(session),
                                                              access_type = access_type,
-                                                             approval_prompt = approval_prompt),
-                                 class=login_class
+                                                             approval_prompt = approval_prompt)
                                  )
-                                 )
+
     } else {
       if(revoke){
 
