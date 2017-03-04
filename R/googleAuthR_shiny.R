@@ -738,7 +738,8 @@ googleAuth <- function(input, output, session,
                                                    access_type = access_type,
                                                    approval_prompt = approval_prompt),
                        target="_blank"
-                       , style = "margin: 20px;"
+                       , style = "margin: 20px;”,
+                       role=“button”
               )
           )
           
