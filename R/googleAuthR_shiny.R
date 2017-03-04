@@ -739,7 +739,7 @@ googleAuth <- function(input, output, session,
                                                    approval_prompt = approval_prompt),
                        target="_blank"
                        , style = "margin: 20px;"
-                       , class = “btn btn-primary"
+                       , class = "btn btn-primary"
               )
           )
           
